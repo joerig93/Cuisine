@@ -1,0 +1,260 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/subPages.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Over Cuisine</title>
+<!-- InstanceEndEditable -->
+
+<link href="../css/reset.css" rel="stylesheet" type="text/css"><!-- reset -->
+<link href="../css/mobileDropdown.css" rel="stylesheet" type="text/css"><!-- mobile dropdown -->    
+<link href="../css/styles.css" rel="stylesheet" type="text/css"><!-- eigen styles -->
+<link href="../css/queries.css" rel="stylesheet" type="text/css">
+
+<script src="../js/jquery-1.9.1.min.js"></script><!-- jquery library -->
+<script src="../js/mobileDropdown.js"></script><!-- mobile dropdown script -->
+
+<script><!-- dropdown script -->
+    $(document).ready(function() {
+		$('.sub-menu').hide();
+        $( '.dropdown' ).hover(
+            function(){
+                $(this).children('.sub-menu').slideDown(200);
+            },
+            function(){
+                $(this).children('.sub-menu').slideUp(200);
+            }
+        ); 
+    }); // end ready -->
+	
+	var relativePathToRoot = '../';
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+<script src="../js/imagemap.js"></script><!-- image map script -->
+<script src="../js/jquery.rwdImageMaps.min.js"></script><!-- responsive imagemap script -->
+
+<script>	
+    $(document).ready(function(e) {
+    	$('img[usemap]').rwdImageMaps();
+	});
+</script>
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body>
+	<div class="navbg"><!-- background navigatie -->
+        <div class="container"><!-- hoofdcontainer geeft de content width aan -->
+            <header class="pageHeader">
+                
+                <img src="../images/icons/svg/logo.svg" alt="" class="logo" ><!-- logo cuisine -->
+                
+               	<div id="menuPadding">
+                  	<nav id="cssmenu">
+                        <ul>
+                            <li class="dropdown"><a href="../index.html">home</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">About</a>
+                                    <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="overons.html">Over Cuisine</a></li>
+                                    <li class="last"><a href="tips.html">Tips &amp; tricks</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="boeken.html">boeken</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown"><a href="weekmenu.html">weekmenu</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">mijn cuisine</a>
+                                    <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="account.html">account</a></li>
+                                    <li><a href="winkelwagen.html">winkelwagen</a></li>
+                                    <li class="last"><a href="afrekenen.html">afrekenen</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown last"><a href="contact.html">contact</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                        </ul>
+                    </nav>                
+               	</div><!-- close menu padding -->
+                <div class="clear"></div>
+                      
+            </header>
+        </div><!-- close container -->
+	</div><!-- close navigation background -->
+	
+	<!-- InstanceBeginEditable name="content" -->
+	
+    <article>
+     	<div class="background"><!-- houten achtergrond -->
+            <div class="titelbalk"><!-- start titelbalk -->
+                <h3>Over Cuisine</h3>
+            </div><!-- close titelbalk -->
+            <section class="container">
+           	  	<div class="contentbg">
+                	<div class="dagbalk">
+                        <h2 id="titel2">Cuisine uitgeverij BV.</h2>
+                    </div>
+                    <p>Cuisine is een kleine uitgeverij gevestigd in Amsterdam. Door de jaren heen heeft het bedrijf zich gespecialiseerd in het uitgeven van kookboeken. Om onze klanten optimaal te kunnen bedienen hebben we onze diensten uitgebreid naar het internet. Op onze site vind je de allernieuwste kookboeken van bekende koks, diëtisten en food deskundigen. 
+Een gezonde levensstijl wordt voor meer en meer mensen steeds belangrijker. Daarom heeft Cuisine ervoor gekozen om u iedere week een weekmenu voor te schotelen met hierin lekkere, gevarieerde en gezonde recepten. Koken is leuk en gezond eten kan ontzettend lekker zijn!
+                    </p>
+                    <p>De basis van onze recepten bestaat uit 3 belangrijke bouwstoffen, namelijk: koolhydraten, vetten en eiwitten. Onderstaand vind u vijf belangrijke voedingsgroepen die rijk zijn aan een of meerdere van deze bouwstoffen. Klik op de door u gewenste productgroep voor meer informatie.
+                    </p>
+             
+                	<div id="switchDiv"><!-- Start switch -->
+                
+                        <div class="textContent" id="one" style="display: none;"><!-- Hierbinnen valt alle variabele content -->
+                            <div>
+                                <h6>Kruiden</h6>
+                                
+                                <p>Je kunt in de keuken verse of gedroogde kruiden of specerijen gebruiken. Ze geven gerechten meer smaak. Ze zijn geschikt om zout mee te vervangen. Het is namelijk niet goed om te veel zout binnen te krijgen. Producten als brood bevatten namelijk al veel zout.
+                                </p>
+                                
+                            </div>
+                            
+                        </div><!-- close textcontent -->
+                        
+                        <div class="textContent" id="two" style="display: none;"><!-- Hierbinnen valt alle variabele content -->
+                            <div>
+                                <h6>Vlees</h6>
+                                
+                                <p>Onbewerkt mager vlees past in een gezond eetpatroon, vooral vanwege de eiwitten, vitamines en mineralen. Het is niet nodig om vlees te eten, je kunt het vervangen door andere producten. Teveel of bewerkt vlees eten kan ook nadelige gevolgen hebben. 
+                                </p>
+                                
+                            </div>
+                            
+                        </div><!-- close textcontent -->
+                        
+                        <div class="textContent" id="three" style="display: none;"><!-- Hierbinnen valt alle variabele content -->
+                            <div>
+                                <h6>Groenten</h6>
+                                
+                                <p>Het advies is om minimaal 250 gram groente per dag te eten. Groente staat in de Schijf van Vijf. Groente levert weinig calorieën en veel voedingsstoffen. Groente geeft veel voordelen voor de gezondheid en hangt samen met een lager risico op chronische ziekten. 
+                                </p>
+                                
+                            </div>
+                            
+                        </div><!-- close textcontent -->
+                        
+                        <div class="textContent" id="four" style="display: none;"><!-- Hierbinnen valt alle variabele content -->
+                            <div>
+                                <h6>Vis</h6>
+                                
+                                <p>Vis is onderdeel van een gezonde voeding. Het staat in de Schijf van Vijf. Vis is goed voor de gezondheid. Visvetzuren zijn goed voor je hart en bloedvaten. Daarom is het advies 1 keer per week vis te eten. Bij voorkeur vette vis, zoals makreel haring, sardines of zalm.
+                                
+                                </p>
+                                
+                            </div>
+                            
+                        </div><!-- close textcontent -->
+                        
+                        <div class="textContent" id="five" style="display: none;"><!-- Hierbinnen valt alle variabele content -->
+                            <div>
+                                <h6>Noten</h6>
+                                
+                                <p>Noten leveren ijzer, vitamine E en vitamine B1. Het zijn goede vegetarische keuzes. In noten zit veel onverzadigd vet. Het eten van ongezouten noten beschermt tegen bepaalde hart- en vaatziekten. Het eten van ongezouten noten verlaagt bovendien het LDL-cholesterol.
+                                	
+                            </div>            
+                        </div><!-- close textcontent -->
+                    </div>
+                    
+                    <img id="foodImg" src="../images/imageMap/noHL.jpg" alt="Voedingsproducten" usemap="#foodMap" width="960" height="600">
+                    
+                    <map id="foodMap" name="foodMap">
+                        <area shape="rect" coords="9,2,950,143" href="#" alt="kruiden" title="kruiden" 
+                            onclick="switchDiv('one'); return false;"
+                            onmouseover="swapImage('kruiden');" 
+                            onmouseout="swapImage('noHL');"><!-- kruiden -->
+
+                        <area shape="poly" coords="3,190,43,187,79,194,116,182,170,172,214,174,249,185,251,216,244,257,221,283,204,298,168,298,154,288,154,318,138,341,105,353,57,350,29,342,3,336" href="#" alt="vlees"
+                            title="vlees" 
+                            onclick="switchDiv('two'); return false;"
+                            onmouseover="swapImage('vlees');" 
+                            onmouseout="swapImage('noHL');"><!-- vlees -->
+                          <area shape="poly" coords="957,189,953,192,943,176,922,178,893,189,861,205,844,192,817,191,799,207,757,209,745,219,736,237,737,266,737,290,744,307,747,313,748,310,725,324,734,349,745,361,751,367,761,390,784,397,809,386,815,374,834,380,851,377,866,384,883,379,889,390,893,398,916,401,955,403" href="#" alt="groenten"	
+                            title="groenten" 
+                            onclick="switchDiv('three'); return false;"
+                            onmouseover="swapImage('groenten');" 
+                            onmouseout="swapImage('noHL');"><!-- groenten -->
+                          <area shape="poly" coords="0,519,43,506,83,506,131,501,167,498,236,503,281,516,303,530,327,561,318,585,294,599,0,597" href="#" alt="vis"
+                            title="vis" 
+                            onclick="switchDiv('four'); return false;"
+                            onmouseover="swapImage('vis');" 
+                            onmouseout="swapImage('noHL');"><!-- vis -->
+                          <area shape="poly" coords="956,463,931,471,925,441,901,468,872,455,864,483,824,480,821,490,798,506,786,496,774,499,749,473,716,454,686,458,660,478,630,515,631,527,620,514,615,539,614,553,591,543,569,545,584,574,578,597,957,598" href="#" alt="noten"
+                            title="noten" 
+                            onclick="switchDiv('five'); return false;"
+                            onmouseover="swapImage('noten');" 
+                            onmouseout="swapImage('noHL');"><!-- noten -->
+                    </map>
+                </div>
+            </section>
+        </div><!-- close background -->
+	</article>	
+	
+	
+	<!-- InstanceEndEditable -->
+    
+    <footer>
+       	<div class="container">
+
+            <div class="kolommen">
+                <h5>Contact</h5>
+                <div class="rijen">
+                    <img src="../images/icons/png/home.png" alt="Adres icon">
+                    <ul>
+                        <li>Cuisine uitgeverij BV.</li>
+                        <li>Lepelaarstraat 12</li>
+                        <li>1102 TK Amsterdam</li>
+                    </ul>
+                </div>
+                <div class="rijen">
+                    <img src="../images/icons/png/phone.png" alt="Adres icon">
+                    <ul>
+                        <li>0226 547242</li>
+                        <li>06 15098563</li>
+                        <li>06 33656723</li>
+                    </ul>
+                </div>
+                <div class="rijen">
+                    <img src="../images/icons/png/email.png" alt="Adres icon">
+                    <ul>
+                        <li>info@cuisine.nl</li>
+                        <li>boeken@cuisine.nl</li>
+                        <li>eten@cuisine.nl</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kolommen">
+                <h5>Social media</h5>
+                <div class="socialImg">
+                	<img src="../images/icons/png/facebook.png" alt="Facebook">
+                	<img src="../images/icons/png/twitter.png" alt="Twitter">
+                	<img src="../images/icons/png/instagram.png" alt="Instagram">
+                	<img src="../images/icons/png/youtube.png" alt="Youtube">
+            	</div>
+            </div>
+            <div class="kolommen rcol">
+                <h5>Openingstijden</h5>
+                <ul class="openingstijden">
+                	<li>Maandag: <span>11:00 - 18:00</span></li>
+                    <li>Dinsdag : <span>9:00 - 18:00</span></li>
+                    <li>Zaterdag: <span>9:00 - 16:00</span></li>
+                    <li>Zondag: <span>Gesloten</span></li>
+                </ul>
+            </div>
+      	</div>
+   	</footer>
+    <!-- InstanceBeginEditable name="scriptRegion" -->
+	
+	<!-- InstanceEndEditable --> 
+</body>
+<!-- InstanceEnd --></html>

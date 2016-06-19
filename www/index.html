@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uitgeverij Cuisine</title> 
+    
+    <link href="css/reset.css" rel="stylesheet" type="text/css"><!-- reset -->
+    <link href="css/slider.css" rel="stylesheet" type="text/css"><!-- image slider -->
+    <link href="css/mobileDropdown.css" rel="stylesheet" type="text/css"><!-- mobile dropdown -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css"><!-- eigen styles -->
+    <link href="css/queries.css" rel="stylesheet" type="text/css"><!-- responsive styles -->
+	
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script><!-- create js -->
+	<script src="js/aanbieding.js"></script><!-- canvas js -->
+    <script src="js/modernizerSlider.js"></script><!-- modernizer voor image slider -->
+    <script src="js/jquery-1.9.1.min.js"></script><!-- jquery library -->
+    <script src="js/mobileDropdown.js"></script><!-- mobile dropdown script -->
+
+    <script><!-- script voor dropdown menu -->
+        $(document).ready(function() {
+            $('.sub-menu').hide();
+            $( '.dropdown' ).hover(
+                function(){
+                    $(this).children('.sub-menu').slideDown(200);
+                },
+                function(){
+                    $(this).children('.sub-menu').slideUp(200);
+                }
+            ); 
+        }); // end ready -->
+    </script>
+    
+    <script><!-- canvas script -->
+		var canvas, stage, exportRoot;
+		function init() {
+			
+			canvas = document.getElementById("canvas");
+			images = images||{};
+			ss = ss||{};
+		
+			var loader = new createjs.LoadQueue(false);
+			loader.installPlugin(createjs.Sound);
+			loader.addEventListener("fileload", handleFileLoad);
+			loader.addEventListener("complete", handleComplete);
+			loader.loadFile({src:"images/animate/sounds/aanbieding_atlas_.json", type:"spritesheet", id:"aanbieding_atlas_"}, true);
+			loader.loadManifest(lib.properties.manifest);
+		}
+		
+		function handleFileLoad(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+		
+		function handleComplete(evt) {
+			var queue = evt.target;
+			ss["aanbieding_atlas_"] = queue.getResult("aanbieding_atlas_");
+			exportRoot = new lib.aanbieding();
+		
+			stage = new createjs.Stage(canvas);
+			stage.addChild(exportRoot);
+			stage.update();
+			stage.enableMouseOver();
+		
+			createjs.Ticker.setFPS(lib.properties.fps);
+			createjs.Ticker.addEventListener("tick", stage);
+		}
+		
+		
+		function playSound(id, loop) {
+			return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+		}
+    </script>
+    
+    <script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("canvas").hide();
+			});
+			$("#show").click(function(){
+				$("canvas").show();
+			});
+		});
+	</script>
+	
+</head>
+
+<body id="page" onload="init();">    
+    
+    <div class="container">  
+    	<canvas class="canvas" id="canvas" width="960" height="200" style="background-color:#783218"></canvas>
+    </div>
+    <header class="homeHeader">
+        <div class="backgroundMobile"><!-- mobile only -->
+            <div class="container"><!-- start container -->
+                <ul class="cb-slideshow">
+                    <li><span>Image 01</span></li>
+                    <li><span>Image 02</span></li>
+                    <li><span>Image 03</span></li>
+                </ul>
+              
+                <a href="#"><img src="images/icons/svg/logo.svg" alt="" class="logo"></a><!-- logo -->
+                <div id="menuPadding">
+                    <nav id="cssmenu">
+                        <ul>
+                            <li class="dropdown"><a href="index.html">home</a>
+                                <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">About</a>
+                                    <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="pages/overons.html">Over Cuisine</a></li>
+                                    <li class="last"><a href="pages/tips.html">Tips &amp; tricks</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="pages/boeken.html">boeken</a>
+                                <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown"><a href="pages/weekmenu.html">weekmenu</a>
+                                <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">mijn cuisine</a>
+                                    <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="pages/account.html">account</a></li>
+                                    <li><a href="pages/winkelwagen.html">winkelwagen</a></li>
+                                    <li class='last'><a href="pages/afrekenen.html">afrekenen</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown last"><a href="pages/contact.html">contact</a>
+                                <img class="dropdownContent" src="images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                        </ul>
+                    </nav>
+                </div><!-- close menu padding -->
+                <div class="clear"></div>
+
+                <div class="heroImageText">
+                    <h1>Welkom bij Cuisine</h1>
+                    <h2>Iedere dag de lekkerste gerechten</h2>
+                    <h2>De allernieuwste kookboeken</h2>
+                    <h2>Binnen 2 dagen in huis</h2>
+                    <button id="show">WEEKAANBIEDING</button>
+                	<button id="hide">SLUIT</button>
+                </div>
+                
+                
+            </div><!-- end container --> 
+            
+            <div class="heroImageTextMobile">
+                <h1 class="container">Welkom bij Cuisine</h1>
+                <h2 class="container">Iedere dag de lekkerste gerechten</h2>
+                <h2 class="container">De allernieuwste kookboeken</h2>
+                <h2 class="container">Binnen 2 dagen in huis</h2>
+            </div>
+         </div><!-- end background mobile only -->
+    </header>
+    
+    <div class="clear"></div>
+      	         
+    <article class="home background">
+        
+            <div class="titelbalk"><!-- start titelbalk -->
+                <h3>Aanbiedingen</h3>
+            </div><!-- close titelbalk -->
+            <section class="container">
+                <div class="contentLeft"><!-- speciaal voor de mobile versie -->
+                    <div class="titelblok"><!-- hier beginnen de titels -->
+                        <h4>Powerfood<span>€24,95</span></h4>
+                    </div>
+                    <div class="titelblokRight tbrMobile">
+                        <h4>In perfecte conditie<span>€17,50</span></h4>
+                    </div>
+                    
+                    <div class="contentblok"><!-- hier begint het content gedeelte -->
+                        <a href="pages/boekActief.html?boek=b001"><img src="images/boeken/boek1.jpg" alt="Powerfood"></a>
+                    </div>
+                    <div class="contentblokRechts cbrMobile">
+                        <a href="pages/boekActief.html?boek=b002"><img src="images/boeken/boek2.jpg" alt="Powerfood"></a>
+                    </div>
+                </div>
+                
+                <div class="contentRight"><!-- speciaal voor de mobile versie -->
+                    <div class="titelblok">
+                        <h4>Everyday Superfood<span>€29,95</span></h4>
+                    </div>
+                    <div class="titelblokRight tbrMobile">
+                        <h4>Pauline's keuken<span>€24,95</span></h4>
+                    </div><!-- hier eindigen de titels -->
+                    
+                    <div class="contentblok">
+                        <a href="pages/boekActief.html?boek=b003"><img src="images/boeken/boek3.jpg" alt="Powerfood"></a>
+                    </div>
+                    <div class="contentblokRechts cbrMobile">
+                        <a href="pages/boekActief.html?boek=b004"><img src="images/boeken/boek4.jpg" alt="Powerfood"></a>
+                    </div><!-- hier eindigt het content gedeelte -->
+                </div>
+                    <div class="clear"></div>
+            </section>
+        
+            <div class="titelbalk"><!-- start titelbalk -->
+                <h3>Recensies</h3>
+            </div><!-- close titelbalk -->
+            <section class="container recensies">
+                <div class="recensie"><!-- start recensie -->
+                    <div class="recensieNaam">
+                        <img src="images/profielfoto/pf1.jpg" alt="profielfoto">
+                        <h4>Fatima de Ridder</h4>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="recensieContent">
+                        <p>"Super website! Sinds ik deze site bezoek hoef ik nooit meer zelf te bedenken wat ik moet koken. Ook een aantal kookboeken besteld. Erg tevreden over de korte levertijd." </p>
+                    </div>
+                </div><!-- einde recensie -->
+                <div class="recensieMiddle"><!-- start recensie -->
+                    <div class="recensieNaam">
+                        <img src="images/profielfoto/pf2.jpg" alt="profielfoto">
+                        <h4>Dirk van Vliet</h4>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="recensieContent">
+                        <p>"Mooie website, zeer overzichtelijk waardoor ik in een paar klikken mijn boeken heb besteld. De boeken zijn erg leuk en afwisselend. Ik kom er dan ook regelmatig." </p>
+                    </div>
+                </div><!-- einde recensie -->
+                <div class="recensie"><!-- start recensie -->
+                    <div class="recensieNaam">
+                        <img src="images/profielfoto/pf3.jpg" alt="profielfoto">
+                        <h4>Hans Janssen</h4>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="recensieContent rcLast">
+                        <p>"Ik vind het lastig om iedere dag weer te bedenken wat ik moet eten. Gelukkig biedt Cuisine mij iedere weer een lekker en afwisselend recept die ook nog een in een handomdraai op tafel staat." </p>
+                    </div>
+                </div><!-- einde recensie -->
+                <div class="clear"></div>
+            </section>
+            
+        	
+    </article>
+                
+    <footer>
+            <div class="container">
+    
+                <div class="kolommen">
+                    <h5>Contact</h5>
+                    <div class="rijen">
+                        <img src="images/icons/png/home.png" alt="Adres icon">
+                        <ul>
+                            <li>Cuisine uitgeverij BV.</li>
+                            <li>Lepelaarstraat 12</li>
+                            <li>1102 TK Amsterdam</li>
+                        </ul>
+                    </div>
+                    <div class="rijen">
+                        <img src="images/icons/png/phone.png" alt="Adres icon">
+                        <ul>
+                            <li>0226 547242</li>
+                            <li>06 15098563</li>
+                            <li>06 33656723</li>
+                        </ul>
+                    </div>
+                    <div class="rijen">
+                        <img src="images/icons/png/email.png" alt="Adres icon">
+                        <ul>
+                            <li>info@cuisine.nl</li>
+                            <li>boeken@cuisine.nl</li>
+                            <li>eten@cuisine.nl</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kolommen">
+                    <h5>Social media</h5>
+                    <div class="socialImg">
+                        <a href="http://www.facebook.com" target="_blank"><img src="images/icons/png/facebook.png" alt="Facebook"></a>
+                        <a href="http://www.twitter.com" target="_blank"><img src="images/icons/png/twitter.png" alt="Twitter"></a>
+                        <a href="http://www.instagram.com" target="_blank"><img src="images/icons/png/instagram.png" alt="Instagram"></a>
+                        <a href="http://www.youtube.com" target="_blank"><img src="images/icons/png/youtube.png" alt="Youtube"></a>
+                    </div>
+                </div>
+                <div class="kolommen rcol">
+                    <h5>Openingstijden</h5>
+                    <ul class="openingstijden">
+                        <li>Maandag: <span>11:00 - 18:00</span></li>
+                        <li>Dinsdag : <span>9:00 - 18:00</span></li>
+                        <li>Zaterdag: <span>9:00 - 16:00</span></li>
+                        <li>Zondag: <span>Gesloten</span></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+            
+</body>
+</html>

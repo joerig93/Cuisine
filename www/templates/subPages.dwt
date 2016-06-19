@@ -1,0 +1,150 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Mijn Cuisine - Account</title>
+<!-- TemplateEndEditable -->
+
+<link href="../css/reset.css" rel="stylesheet" type="text/css"><!-- reset -->
+<link href="../css/mobileDropdown.css" rel="stylesheet" type="text/css"><!-- mobile dropdown -->    
+<link href="../css/styles.css" rel="stylesheet" type="text/css"><!-- eigen styles -->
+<link href="../css/queries.css" rel="stylesheet" type="text/css">
+
+<script src="../js/jquery-1.9.1.min.js"></script><!-- jquery library -->
+<script src="../js/mobileDropdown.js"></script><!-- mobile dropdown script -->
+
+<script><!-- dropdown script -->
+    $(document).ready(function() {
+		$('.sub-menu').hide();
+        $( '.dropdown' ).hover(
+            function(){
+                $(this).children('.sub-menu').slideDown(200);
+            },
+            function(){
+                $(this).children('.sub-menu').slideUp(200);
+            }
+        ); 
+    }); // end ready -->
+	
+	var relativePathToRoot = '../';
+</script>
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+</head>
+
+<body>
+	<div class="navbg"><!-- background navigatie -->
+        <div class="container"><!-- hoofdcontainer geeft de content width aan -->
+            <header class="pageHeader">
+                
+                <img src="../images/icons/svg/logo.svg" alt="" class="logo" ><!-- logo cuisine -->
+                
+               	<div id="menuPadding">
+                  	<nav id="cssmenu">
+                        <ul>
+                            <li class="dropdown"><a href="../index.html">home</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">About</a>
+                                    <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="../pages/overons.html">Over Cuisine</a></li>
+                                    <li class="last"><a href="../pages/tips.html">Tips &amp; tricks</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="../pages/boeken.html">boeken</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown"><a href="../pages/weekmenu.html">weekmenu</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                            <li class="dropdown has-sub">
+                                <a href="#">mijn cuisine</a>
+                                    <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                                <ul class="sub-menu">
+                                    <li><a href="../pages/account.html">account</a></li>
+                                    <li><a href="../pages/winkelwagen.html">winkelwagen</a></li>
+                                    <li class="last"><a href="../pages/afrekenen.html">afrekenen</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown last"><a href="../pages/contact.html">contact</a>
+                                <img class="dropdownContent" src="../images/icons/svg/vorkGroen.svg" alt="vork">
+                            </li>
+                        </ul>
+                    </nav>                
+               	</div><!-- close menu padding -->
+                <div class="clear"></div>
+                      
+            </header>
+        </div><!-- close container -->
+	</div><!-- close navigation background -->
+	
+	<!-- TemplateBeginEditable name="content" -->
+	<article>
+     	<div class="background"><!-- houten achtergrond -->
+            <div class="titelbalk"><!-- start titelbalk -->
+                <h3></h3>
+            </div><!-- close titelbalk -->
+       	<!-- close background -->
+	</article>	
+<!-- TemplateEndEditable -->
+    
+    <footer>
+       	<div class="container">
+
+            <div class="kolommen">
+                <h5>Contact</h5>
+                <div class="rijen">
+                    <img src="../images/icons/png/home.png" alt="Adres icon">
+                    <ul>
+                        <li>Cuisine uitgeverij BV.</li>
+                        <li>Lepelaarstraat 12</li>
+                        <li>1102 TK Amsterdam</li>
+                    </ul>
+                </div>
+                <div class="rijen">
+                    <img src="../images/icons/png/phone.png" alt="Adres icon">
+                    <ul>
+                        <li>0226 547242</li>
+                        <li>06 15098563</li>
+                        <li>06 33656723</li>
+                    </ul>
+                </div>
+                <div class="rijen">
+                    <img src="../images/icons/png/email.png" alt="Adres icon">
+                    <ul>
+                        <li>info@cuisine.nl</li>
+                        <li>boeken@cuisine.nl</li>
+                        <li>eten@cuisine.nl</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kolommen">
+                <h5>Social media</h5>
+                <div class="socialImg">
+                	<img src="../images/icons/png/facebook.png" alt="Facebook">
+                	<img src="../images/icons/png/twitter.png" alt="Twitter">
+                	<img src="../images/icons/png/instagram.png" alt="Instagram">
+                	<img src="../images/icons/png/youtube.png" alt="Youtube">
+            	</div>
+            </div>
+            <div class="kolommen rcol">
+                <h5>Openingstijden</h5>
+                <ul class="openingstijden">
+                	<li>Maandag: <span>11:00 - 18:00</span></li>
+                    <li>Dinsdag : <span>9:00 - 18:00</span></li>
+                    <li>Zaterdag: <span>9:00 - 16:00</span></li>
+                    <li>Zondag: <span>Gesloten</span></li>
+                </ul>
+            </div>
+      	</div>
+   	</footer>
+    <!-- TemplateBeginEditable name="scriptRegion" -->
+	
+	<!-- TemplateEndEditable --> 
+</body>
+</html>

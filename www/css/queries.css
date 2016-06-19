@@ -1,0 +1,652 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+@media screen and (max-width:1020px) {
+
+/* Bij deze mediaquery wordt alleen de margin van de r aangepast */
+	
+	.container{
+		padding-right: 1rem;
+		padding-left: 1rem;
+		box-sizing: border-box; 	
+	}
+    
+    .contentbg{
+        background-color: white;
+        margin-top: 20px;
+        border-radius: 10px;
+        position: relative;
+        
+    }
+    
+    input{
+        float: none;
+        border-radius: 5px;	
+        width: 70%;
+        display: block;
+		margin-top: 20px;
+    }
+}
+
+/* Vanaf hier past het menu niet meer op één rij */
+
+@media screen and (max-width:890px) {
+
+	header nav ul li a{
+		font-size: 16px;
+		padding-left: 1.5rem;
+	}
+    
+    .clearTablet{
+        clear: both;
+    }
+	
+	.canvas, #show, #hide{
+		display: none;	
+	}
+	
+	/*** font-styles ***/
+	/* ook de font-sizes gaan licht omlaag */
+
+	h1{
+		font-size: 60px;
+	}
+	  
+	h2{
+		font-size: 28px;
+	}
+	
+	h3{
+		font-size: 36px;
+	}
+	
+	h5{
+		font-size: 26px;
+	}
+	
+	
+
+}
+
+/* Viewport van onder andere iPad Air */
+
+@media screen and (max-width:770px) {
+	
+	header{
+		height: 600px;
+	}
+	
+	header nav ul li a{  
+		padding-left: 0.5rem;
+		font-size: 16px;
+	}	
+	
+	/* video frame */
+	
+	.tipsVid{
+		height: 315px;
+	}
+	
+	/*** ARTICLE ***/
+	
+	/* over ons */
+	
+	.textContent{
+		bottom: 70px;
+		margin-left: 30%;
+	}
+	
+	.textContent p{
+		color: white;
+		font-family: "Drawing Guides", Arial, sans-serif;
+		font-size: 16px;	
+	}
+	
+	h6{
+		font-family: Chalk, Arial, sans-serif;	
+		color: white;
+		font-size: 50px;
+		text-align: center;
+		padding-top: 20px;
+	}
+	
+	/* contact pagina */
+    
+    .buttons{
+        width: 45%;
+        box-sizing: border-box;
+        margin-right: 5%;
+    }
+    
+    /* actieve boek */
+    
+    .leftPart h5{
+		color: #00a837;
+		font-size: 36px;
+		padding: 1rem 0;
+		vertical-align: top;
+		position: relative;
+		top: auto;
+		right: auto;
+		padding-left: 20px;
+	}
+	
+	textarea{
+		display: block;	
+	}
+    
+
+	
+	/*** footer ***/
+	
+	footer img{
+		width: 50px;
+		float: left;
+		margin-right: 2rem;
+	}
+	
+	.socialImg img{
+		margin: 0.3rem;
+		width: 30px;
+	}
+	
+	footer ul li{ /* footer tekstgrootte omlaag */
+		font-size: 14px;
+		font-family: "Tw Cen MT", arial, sans-serif;	
+		line-height: 1.2;
+		text-align: left;
+		padding-top: 0.2rem;
+		color: #ffffff;
+	}
+    
+    
+    /* weekmenu pagina */
+    
+
+    .oneven .weekmenuContent{
+        max-height: 260px;
+        overflow-y: scroll;
+    }
+
+    .even .weekmenuContent{
+        max-height: 260px;
+        overflow-y: scroll; 
+    }
+}
+
+/* vanaf hier passen zowel navigatie als de footer items niet meer op één lijn */
+
+@media screen and (max-width:680px) {
+	
+	.kolommen{
+		width: 50%;
+	}
+	
+	.kolommen ul{
+		float: left;
+	}
+
+	.openingstijden{
+		width: 80%;
+	} 
+	
+	footer .rcol{
+		float: left;
+		text-align: center;	
+	}
+}
+
+
+
+@media screen and (max-width:512px){ /* VANAF HIER IS HET MOBILE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    
+    .container{
+		padding-right: 0.8rem;
+		padding-left: 0.8rem;
+		box-sizing: border-box; 	
+	}
+    
+    .homeHeader{
+        height: auto; 
+    }
+    
+    header{
+		height: auto;
+	}
+    
+    
+    header img.logo {
+        box-sizing: border-box;
+        width: 60%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    
+    
+    /*** navigation ***/
+    
+    .navbg{
+        background-color: white;
+        height: auto;
+    }
+    
+    header nav{
+        float: none;
+        width: 100%;
+        padding: 1rem 0 0.5rem 0;
+        background-color: white;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    header nav ul{
+        text-align: center;
+    }
+
+    header nav ul li{
+        width: 100%;
+        display: block;
+        position: relative;
+        vertical-align: center;
+    }
+
+    header nav ul li a{
+        display: block;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    
+    .dropdown:hover .dropdownContent {
+        display: none;
+    }
+    
+    .hamburger{
+        display: inline-block;
+        z-index: 20;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    
+    /*** sub navigation ***/
+
+    .sub-menu{
+        position: relative;
+        top: 100%;
+        left: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .sub-menu li{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .sub-menu li a{
+        font-size: 12px;
+        padding: 0;
+    }
+    
+    /* content backgrounds */
+    .backgroundMobile{
+        background-image: url(../images/achtergrond.jpg);
+        background-attachment: fixed;
+        width: 100%;
+    }
+    
+    /* ARTICLE */
+    
+    /* algemene stijlen */
+    
+    .titelbalk{
+        text-align: center;
+        padding: 0.5em 0;
+        position: relative;
+    }
+    
+   
+
+    
+    /* specific for homepage */
+    
+     .contentLeft{
+        width: 100%;
+        float: none;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contentRight{
+        width: 100%;
+        float: none;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .titelblok{
+        width: 46%;
+        background-color: white;
+        height: 60px;
+        float: left;
+        margin: 10px 6.66% 10px 0;
+        -webkit-box-shadow: 3px 3px 6px 1px;
+        box-shadow: 3px 3px 6px 1px;
+    }
+    
+    .tbrMobile{
+        width: 46%;
+        background-color: white;
+        height: 60px;
+        float: left;
+        margin: 10px 0 10px 0;
+        -webkit-box-shadow: 3px 3px 6px 1px;
+        box-shadow: 3px 3px 6px 1px;
+    }
+
+    .contentblok a img{
+        width: 46%;
+        background-color: white;
+        float: left;
+        margin: 10px 6.66% 20px 0;
+        -webkit-box-shadow: 3px 3px 6px 1px;
+        box-shadow: 3px 3px 6px 1px;
+    }
+
+    .cbrMobile img{
+        width: 46%;
+        float: left;
+        margin: 10px 0 20px 0;
+        -webkit-box-shadow: 3px 3px 6px 1px;
+        box-shadow: 3px 3px 6px 1px;	
+    }
+    
+    /* recensies */
+    
+    .recensie{
+        width: 100%;
+        margin: 20px 0 0 0;
+        float: none;	
+    }
+    
+    .recensieMiddle{
+        width: 100%;
+        margin: 20px 0 0 0;
+        float: none;	
+    }
+    
+    .recensieContent{	
+        height: auto;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 40px;
+    }
+    
+    .rcLast{	  
+        margin-bottom: 0px;
+    }
+	
+	/* over ons */
+	
+	.textContent{
+		width: 100%;
+		position: static;
+		margin-left: 0;
+	}
+	
+	.textContent p{
+		color: black;
+		font-family: "Drawing Guides", Arial, sans-serif;
+		font-size: 15px;	
+	}
+	
+	h6{
+		font-family: 'Tw Cen MT', Arial, sans-serif;
+		color: red;
+		font-size: 30px;
+		text-align: center;
+	}
+	
+	/* video */
+	
+	.tipsVid{
+		height: 200px;
+	}
+	
+	.videoMobile{
+		display: block;	
+	}
+	
+	.videoDesktop{
+		display: none;	
+	}
+    
+	
+	
+    
+    /* contact pagina */
+    
+    textarea{
+        max-width: 100%;
+    }
+    
+    .naam, .postcode, .aanhef, .telefoonnummer, .email, .wachtwoord{
+        display: block;
+        width: 100%;	
+    }
+    
+    
+    /* weekmenu */
+    
+    .oneven .weekmenuImg{
+        width: 100%;
+        float: none;
+        border-bottom-left-radius: 0;
+    }
+
+    .oneven .weekmenuContent{
+        width: 100%;
+        float: none;
+        margin-top: -3px;
+    }
+
+    .even .weekmenuImg{
+        width: 100%;
+        float: none;
+        border-bottom-right-radius: 0;
+    }
+
+    .even .weekmenuContent{
+        width: 100%;
+        float: none;
+        margin-top: -3px;
+    }
+	
+	/* boek actief */
+	
+	.leftPart{
+		width: 100%;	
+		float: none;
+	}
+	
+	.leftPart h5{
+		color: #00a837;
+		font-size: 36px;
+		padding: 1rem 0;
+		vertical-align: top;
+		position: relative;
+		top: auto;
+		right: auto;
+		padding-left: 20px;
+	}
+	
+	.rightPart{
+		width: 100%;
+		display: inline-block;
+		float: none;	
+	}
+	
+	.rightPart img{
+		display: none;
+	}
+	
+	.boekMobile{
+		display: block;
+		border-top-right-radius: none;
+		float: none;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	
+	.rightPart ul{
+		list-style-type: disc;
+		list-style-position: inside;
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 20px;
+	}
+	
+	h5 img{
+		width: 100px;
+		position: absolute;
+		padding-top: 10px;
+	}
+	
+	h5 img:hover{
+		width: 110px;
+	}
+	
+	
+	/* winkelmandje */
+	
+	.winkelPrijs{
+		margin-top: 50px;	
+	}
+	
+	.winkelRow input{
+		margin-top: 50px;
+	}
+	
+	.winkelTot{
+		width: 90%;	
+	}
+	
+	/* recept */
+	
+	.leftPartRecept{
+		width: 100%;
+		display: inline-block;	
+		float: none;
+	}
+	
+	.rightPartRecept{
+		width: 100%;
+		display: inline-block;
+		float: none;	
+	}
+		
+    .timer{
+		padding-bottom: 20px;
+		vertical-align: middle;
+	}
+    
+    /*** FOOTER ***/
+    
+    footer{
+        height: 540px;
+    }
+    
+    .kolommen{
+        width: 100%;
+        float: none;
+    }
+
+    .kolommen ul{
+        float: none;
+        display: block;
+    }
+
+    .rijen{
+        display: block;
+        padding-bottom: 10px;
+    }
+    
+    footer div + div{
+        text-align: left;
+    }
+
+    footer .rcol{
+        text-align: left;
+    }
+    
+    .socialImg{
+        display: inline-block;
+        margin: 0 auto;	
+    }
+
+    .socialImg img{
+        margin-right: 0.6rem;
+        width: 50px;
+        margin-left: none;
+    }
+
+    .openingstijden{
+        width: 70%;	
+    }
+
+    
+    /* font-styles */
+
+    /* homepage; de homepagina heeft aparte h1, h2, h3 fontstyles */
+
+    .homeHeader h1{
+        font-size: 30px;
+        padding-bottom: 1rem;
+        position: relative;
+        text-shadow: none;
+		font-family: 'Quicksand', 'Tw Cen MT', arial, sans-serif;
+    }
+
+    .homeHeader h2{
+        font-size: 18px;
+        padding-bottom: 0.3rem;
+        text-shadow: none;
+		padding-left: 0.8rem;
+		padding-top: 10px;
+    }
+    
+    .heroImageText{
+        display: none;
+    }
+    
+    .heroImageTextMobile{
+        display: block;
+        background-color: #2db299;
+        z-index: 30;
+        position: relative;
+        width: 100%;
+        padding: 20px 0 20px 0;
+    }
+
+    .titelbalk h3{
+        font-size: 34px;
+        font-family: 'Quicksand', 'Tw Cen MT', arial, sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 1.2; 
+       
+    }
+    
+   	.home h4{
+		font-size: 13px;	
+	}
+    
+    
+
+}
+
